@@ -3,14 +3,30 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>TINDRUM</title>
+    <title>CALCULATOR</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/calculator.css">
     <script src="js/calculator.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
 
-<body></body>
+<body onload="first()">
+    <div class="container main">
+        <div class="inputfield">
+            <input id="userinput" placeholder="0">
+        </div>
+        <div class="buttons">
+            <button class="btn btn-primary" onClick="append('add')">+</button>
+            <button class="btn btn-primary" onClick="append('sub')">-</button>
+            <button class="btn btn-primary" onClick="append('mul')">X</button>
+            <button class="btn btn-primary" onClick="append('div')">/</button>
+        </div>
+        <div class="buttons" onClick="calculate()">
+            <button class="btn btn-primary">=</button>
+        </div>
+        <p id="output"></p>
+        <p id="result"></p>
+    </div>
+</body>
